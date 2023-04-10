@@ -1875,7 +1875,7 @@ export type TranslationFunctions = {
 		GenerateButton: () => LocalizedString
 		PromptInput: {
 			/**
-			 * Portrait of a cat by Van Gogh
+			 * Funny picture with many partying cats
 			 */
 			Placeholder: () => LocalizedString
 		}

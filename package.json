@@ -3,7 +3,7 @@
 	"version": "4.01",
 	"private": true,
 	"scripts": {
-		"dev": "npm run i18n & vite dev",
+		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
 		"start": "export $(xargs <.env) && node ./build",

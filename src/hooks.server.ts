@@ -36,6 +36,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 	// protect requests to all routes that start with /admin
 	if (event.url.pathname.startsWith('/admin')) {
+		console.log(event)
 		const notSignedInRedirectRoute = `/sign-in?redirect_to=${encodeURIComponent(
 			event.url.pathname
 		)}`;
@@ -46,7 +47,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 			if (!userId) {
 				return notSignedInResponse(notSignedInRedirectRoute);
 			}
-			const res = await fetch(`${apiUrl.origin}/v1/user`, {
+			const res = await fetch(`${apiUrl.origin}`, {
 				method: 'GET',
 				headers: {
 					'Content-Type': 'application/json',
